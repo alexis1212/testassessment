@@ -4,7 +4,7 @@ Feature: Find a product by its id
   I want to be able to retrieve a certain product by its id
   So that I can see the details of that product
 
-  @findProductByIdPositive
+  @findProductByIdPositive @smoke
   Scenario: Find an existing product
     Given a product with following data already exists:
       | name   | type | price | shipping | upc     | description | manufacturer | model | url             | image           |

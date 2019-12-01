@@ -22,7 +22,7 @@ Feature: Retrieve a list of products
     When I attempt to list "100" available products starting from "100000"
     Then I should get an empty list of products
 
-  @findProductsJson
+  @findProductsJson @smoke
   Scenario: Retrieve list of products in a correct format
     When I attempt to list "10" available products starting from "1"
     Then I should get a list of products containing correct information

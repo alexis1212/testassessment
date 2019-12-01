@@ -22,7 +22,7 @@ Feature: Updating information about an existing product
       | Heroes        | Game | 9.99  | 12.99    | 123457990077 | Stategy     | Another      | 5     | http://fake.com    |                 |
       | Heroes of M&M | Game | 19.99 | 0.10     | 123457990077 | Description | Ubisoft      | 3     | http://fake.com    | http://fake.jpg |
 
-  @updateProductPartial
+  @updateProductPartial  @smoke
   Scenario: Updating only product name
     Given a product with following data already exists:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |

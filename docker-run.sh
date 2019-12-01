@@ -10,12 +10,11 @@ if [[ $TAG = "" ]]; then
   TAG="@$ENDPOINT"
 fi
 
-#start the application in the background
+#start the application in the background using docker
 git clone https://github.com/azakordonets/api-playground.git
 cd api-playground
-npm install
-npm start &
-BACK_PID=$!
+docker build -t api-playground .
+docker run -d -p 127.0.0.1:3030:3030 --name api-playground api-playground
 
 #if endpoint is not provided, run entire set of tests, otherwise run only tests for chosen endpoint
 cd ..
@@ -26,6 +25,6 @@ else
   mvn clean test -Dtest="${RUNNER}" -Dcucumber.options="--tags ${TAG}"
 fi
 
-#kill the process and remove the application
-trap "kill 0" EXIT
+#remove docker container and the application
+docker rm -f api-playground
 rm -rf api-playground/

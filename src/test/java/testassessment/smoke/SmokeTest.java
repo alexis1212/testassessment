@@ -22,11 +22,11 @@ public class SmokeTest {
     public void listAvailableProductsTest() {
         Response response = given().baseUri("http://localhost:3030").header("Content-Type", "application/json")
                 .queryParam("$limit", "10")
-                .queryParam("$skip", "51955")
+                .queryParam("$skip", "5195")
                 .when().get(Uri.PRODUCTS.getUri())
                 .then().assertThat().statusCode(HttpStatus.SC_OK)
                 .body("limit", equalTo(10))
-                .body("skip", equalTo(51955))
+                .body("skip", equalTo(5195))
                 .body(matchesJsonSchemaInClasspath("products-schema.json"))
                 .extract().response();
 

@@ -4,7 +4,7 @@ Feature: Adding a new product to the webshop
   I want to be able to add new products to webshop
   So that I can offer new products to customers
 
-  @addProductPositive
+  @addProductPositive @smoke
   Scenario: Create a product with mandatory fields
     When I attempt to create a following product:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |

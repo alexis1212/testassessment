@@ -4,7 +4,7 @@ Feature: Deleting a product
   I want to be able to delete the products that no longer exist
   So that I can keep the store in the correct state
 
-  @deleteProductPositive
+  @deleteProductPositive @smoke
   Scenario: Deleting an existing product
     Given a product with following data already exists:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
