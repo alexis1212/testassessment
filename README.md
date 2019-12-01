@@ -37,6 +37,6 @@ EXAMPLE:
 
 `./docker-run.sh products @products`
 
-#REPORTS:
+# REPORTS:
 
 After the tests were executed, html test results are stored in a report located in `target/reports/test-report/index.html`.
