@@ -4,7 +4,7 @@ Feature: Updating information about an existing product
   I want to be able to update my products information
   So that the correct information is always shown
 
-  @updateProductPostive
+  @updateProductPositive
   Scenario Outline: Updating an existing product information
     Given a product with following data already exists:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
