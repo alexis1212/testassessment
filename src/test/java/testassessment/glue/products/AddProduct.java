@@ -107,4 +107,12 @@ public class AddProduct {
                 .then().statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 
+    /*
+    Asserting that we are getting correct error code when trying to create a product with non-unique upc
+     */
+    @Then("I should be informed that the product with the provided upc already exists")
+    public void iShouldBeInformedThatTheProductWithTheProvidedUpcAlreadyExists() {
+        storedResponse.getStoredResponse()
+                .then().statusCode(HttpStatus.SC_CONFLICT);
+    }
 }

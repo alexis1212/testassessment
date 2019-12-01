@@ -29,6 +29,5 @@ Feature: Retrieve a list of products
 
   @findProductsNegative
   Scenario: Retrieve list of products using wrong parameter type
-    # Should return Bad Request
     When I attempt to list "qwerty" available products starting from "asdfg"
     Then I should be presented with an error

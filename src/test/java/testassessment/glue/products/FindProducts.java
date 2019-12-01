@@ -86,11 +86,11 @@ public class FindProducts {
     }
 
     /*
-    Asserting that we are getting correct error message - in this case API returns 500, should be 400, so this scenario should fail
+    Asserting that we are getting correct error message
      */
     @Then("I should be presented with an error")
     public void iShouldBePresentedWithAnError() {
         storedResponse.getStoredResponse()
-                .then().statusCode(HttpStatus.SC_INTERNAL_SERVER_ERROR);
+                .then().statusCode(HttpStatus.SC_BAD_REQUEST);
     }
 }

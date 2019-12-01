@@ -53,11 +53,10 @@ Feature: Adding a new product to the webshop
 
   @addProductDuplicate
   Scenario: Create a duplicate product with upc that is not unique
-    # Should not be allowed
     Given a product with following data already exists:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
       | Heroes | Game | 9.99  | 0.00     | 978887990079 | Stategy     | Ubisoft      | 3     | http://fake.com | http://fake.jpg |
     When I attempt to create a following product:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
       | Heroes | Game | 9.99  | 0.00     | 978887990079 | Stategy     | Ubisoft      | 3     | http://fake.com | http://fake.jpg |
-    Then I should be informed that creating a product was successful
+    Then I should be informed that the product with the provided upc already exists

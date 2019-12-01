@@ -20,6 +20,5 @@ Feature: Deleting a product
 
   @deleteProductNegative
   Scenario: Deleting a product with String as an id
-    # Should return Bad Request
     When I attempt to delete the product using invalid id
-    Then I should be informed that selected product was not found
+    Then I should be presented with an error

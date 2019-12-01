@@ -73,4 +73,9 @@ public class UpdateProductById {
                 .body("price", equalTo(product.getPrice()));
     }
 
+    @Then("I should be informed that some of the fields contain invalid values")
+    public void iShouldBeInformedThatSomeOfTheFieldsContainInvalidValues() {
+        storedResponse.getStoredResponse()
+                .then().assertThat().statusCode(HttpStatus.SC_BAD_REQUEST);
+    }
 }

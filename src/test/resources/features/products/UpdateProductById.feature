@@ -50,17 +50,13 @@ Feature: Updating information about an existing product
 
   @updateProductInvalidValues
   Scenario Outline: Updating product with invalid values in fields
-    # Should not be allowed
     Given a product with following data already exists:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
       | Heroes | Game | 9.99  | 0.00     | 123457990070 | Stategy     | Ubisoft      | 3     | http://fake.com | http://fake.jpg |
     When I attempt to update the details of the selected product with the following information:
       | name   | type   | price   | shipping   | upc   | description   | manufacturer   | model   | url   | image   |
       | <name> | <type> | <price> | <shipping> | <upc> | <description> | <manufacturer> | <model> | <url> | <image> |
-    Then I should be informed that updating a product was successful
-    And the product with following details should exist:
-      | name   | type   | price   | shipping   | upc   | description   | manufacturer   | model   | url   | image   |
-      | <name> | <type> | <price> | <shipping> | <upc> | <description> | <manufacturer> | <model> | <url> | <image> |
+    Then I should be informed that some of the fields contain invalid values
     Examples:
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
       |        | Game | 9.99  | 0.00     | 123457990070 | Stategy     | Ubisoft      | 3     | http://fake.com | http://fake.jpg |
@@ -75,8 +71,7 @@ Feature: Updating information about an existing product
 
   @updateProductNegative
   Scenario: Updating a product using String as an id
-    # Should return Bad Request
     When I attempt to update the details of the selected product using invalid id
       | name   | type | price | shipping | upc          | description | manufacturer | model | url             | image           |
       | Heroes | Game | 9.99  | 0.00     | 123457990071 | Stategy     | Ubisoft      | 3     | http://fake.com | http://fake.jpg |
-    Then I should be informed that selected product was not found
+    Then I should be presented with an error
