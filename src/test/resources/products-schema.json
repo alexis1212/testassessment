@@ -1,0 +1,255 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "total",
+    "limit",
+    "skip",
+    "data"
+  ],
+  "properties": {
+    "total": {
+      "$id": "#/properties/total",
+      "type": "integer",
+      "title": "The Total Schema",
+      "default": 0,
+      "examples": [
+        52214
+      ]
+    },
+    "limit": {
+      "$id": "#/properties/limit",
+      "type": "integer",
+      "title": "The Limit Schema",
+      "default": 0,
+      "examples": [
+        10
+      ]
+    },
+    "skip": {
+      "$id": "#/properties/skip",
+      "type": "integer",
+      "title": "The Skip Schema",
+      "default": 0,
+      "examples": [
+        10
+      ]
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "array",
+      "title": "The Data Schema",
+      "items": {
+        "$id": "#/properties/data/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "price",
+          "upc",
+          "shipping",
+          "description",
+          "manufacturer",
+          "model",
+          "url",
+          "image",
+          "createdAt",
+          "updatedAt",
+          "categories"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/data/items/properties/id",
+            "type": "integer",
+            "title": "The Id Schema",
+            "default": 0,
+            "examples": [
+              347333
+            ]
+          },
+          "name": {
+            "$id": "#/properties/data/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "METRA - Antenna Cable Adapter - Black"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/data/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "HardGood"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "price": {
+            "$id": "#/properties/data/items/properties/price",
+            "type": "number",
+            "title": "The Price Schema",
+            "default": 0.0,
+            "examples": [
+              13.99
+            ]
+          },
+          "upc": {
+            "$id": "#/properties/data/items/properties/upc",
+            "type": "string",
+            "title": "The Upc Schema",
+            "default": "",
+            "examples": [
+              "086429007189"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "shipping": {
+            "$id": "#/properties/data/items/properties/shipping",
+            "type": "number",
+            "title": "The Shipping Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "description": {
+            "$id": "#/properties/data/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "Compatible with select 1988-2005 vehicles; adapts an aftermarket antenna to OEM radios; flat plug"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "manufacturer": {
+            "$id": "#/properties/data/items/properties/manufacturer",
+            "type": "string",
+            "title": "The Manufacturer Schema",
+            "default": "",
+            "examples": [
+              "METRA"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "model": {
+            "$id": "#/properties/data/items/properties/model",
+            "type": "string",
+            "title": "The Model Schema",
+            "default": "",
+            "examples": [
+              "40VW10"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "url": {
+            "$id": "#/properties/data/items/properties/url",
+            "type": "string",
+            "title": "The Url Schema",
+            "default": "",
+            "examples": [
+              "http://www.bestbuy.com/site/metra-antenna-cable-adapter-black/347333.p?id=1169512349334&skuId=347333&cmp=RMXCC"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "image": {
+            "$id": "#/properties/data/items/properties/image",
+            "type": "string",
+            "title": "The Image Schema",
+            "default": "",
+            "examples": [
+              "http://img.bbystatic.com/BestBuy_US/images/products/3473/347333_sa.jpg"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "createdAt": {
+            "$id": "#/properties/data/items/properties/createdAt",
+            "type": "string",
+            "title": "The Createdat Schema",
+            "default": "",
+            "examples": [
+              "2016-11-17T17:58:03.298Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "updatedAt": {
+            "$id": "#/properties/data/items/properties/updatedAt",
+            "type": "string",
+            "title": "The Updatedat Schema",
+            "default": "",
+            "examples": [
+              "2016-11-17T17:58:03.298Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "categories": {
+            "$id": "#/properties/data/items/properties/categories",
+            "type": "array",
+            "title": "The Categories Schema",
+            "items": {
+              "$id": "#/properties/data/items/properties/categories/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "id",
+                "name",
+                "createdAt",
+                "updatedAt"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/data/items/properties/categories/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "abcat0300000"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/data/items/properties/categories/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "Car Electronics & GPS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "createdAt": {
+                  "$id": "#/properties/data/items/properties/categories/items/properties/createdAt",
+                  "type": "string",
+                  "title": "The Createdat Schema",
+                  "default": "",
+                  "examples": [
+                    "2016-11-17T17:57:04.285Z"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "updatedAt": {
+                  "$id": "#/properties/data/items/properties/categories/items/properties/updatedAt",
+                  "type": "string",
+                  "title": "The Updatedat Schema",
+                  "default": "",
+                  "examples": [
+                    "2016-11-17T17:57:04.285Z"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

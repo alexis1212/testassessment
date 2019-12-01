@@ -1,0 +1,210 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "price",
+    "upc",
+    "shipping",
+    "description",
+    "manufacturer",
+    "model",
+    "url",
+    "image",
+    "createdAt",
+    "updatedAt",
+    "categories"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "default": 0,
+      "examples": [
+        347155
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Metra - Wiring Harness for Most 1986-1998 Honda Acura Vehicles - Multicolored"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "HardGood"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "price": {
+      "$id": "#/properties/price",
+      "type": "number",
+      "title": "The Price Schema",
+      "default": 0.0,
+      "examples": [
+        16.99
+      ]
+    },
+    "upc": {
+      "$id": "#/properties/upc",
+      "type": "string",
+      "title": "The Upc Schema",
+      "default": "",
+      "examples": [
+        "086429002597"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "shipping": {
+      "$id": "#/properties/shipping",
+      "type": "number",
+      "title": "The Shipping Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "Compatible with most 1986-1998 Honda Acura vehicles; connects an aftermarket radio to a vehicle's harness"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "manufacturer": {
+      "$id": "#/properties/manufacturer",
+      "type": "string",
+      "title": "The Manufacturer Schema",
+      "default": "",
+      "examples": [
+        "Metra"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "model": {
+      "$id": "#/properties/model",
+      "type": "string",
+      "title": "The Model Schema",
+      "default": "",
+      "examples": [
+        "70-1720"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "The Url Schema",
+      "default": "",
+      "examples": [
+        "http://www.bestbuy.com/site/metra-wiring-harness-for-most-1986-1998-honda-acura-vehicles-multicolored/347155.p?id=1142292396747&skuId=347155&cmp=RMXCC"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "image": {
+      "$id": "#/properties/image",
+      "type": "string",
+      "title": "The Image Schema",
+      "default": "",
+      "examples": [
+        "http://img.bbystatic.com/BestBuy_US/images/products/3471/347155_rc.jpg"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "createdAt": {
+      "$id": "#/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema",
+      "default": "",
+      "examples": [
+        "2016-11-17T17:58:03.298Z"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "updatedAt": {
+      "$id": "#/properties/updatedAt",
+      "type": "string",
+      "title": "The Updatedat Schema",
+      "default": "",
+      "examples": [
+        "2016-11-17T17:58:03.298Z"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "categories": {
+      "$id": "#/properties/categories",
+      "type": "array",
+      "title": "The Categories Schema",
+      "items": {
+        "$id": "#/properties/categories/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "name",
+          "createdAt",
+          "updatedAt"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/categories/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "abcat0300000"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/categories/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "Car Electronics & GPS"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "createdAt": {
+            "$id": "#/properties/categories/items/properties/createdAt",
+            "type": "string",
+            "title": "The Createdat Schema",
+            "default": "",
+            "examples": [
+              "2016-11-17T17:57:04.285Z"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "updatedAt": {
+            "$id": "#/properties/categories/items/properties/updatedAt",
+            "type": "string",
+            "title": "The Updatedat Schema",
+            "default": "",
+            "examples": [
+              "2016-11-17T17:57:04.285Z"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}
